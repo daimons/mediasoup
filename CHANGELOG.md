@@ -1,6 +1,31 @@
 # Changelog
 
 
+### 3.6.22 (WIP)
+
+* `Transport.cpp`: Provide transport congestion client with RTCP Receiver Reports (#464)
+* Update `libuv` to 1.40.0.
+* Update Node deps.
+
+
+### 3.6.21
+
+* Fix memory leak in Node.js layer due to `PayloadChannel` event listener not being removed (related to #463).
+
+
+### 3.6.20
+
+* Remove `-fwrapv` when building mediasoup-worker in `Debug` mode (issue #460).
+* Add `MEDIASOUP_MAX_CORES` to limit `NUM_CORES` during mediasoup-worker build (PR #462).
+
+
+### 3.6.19
+
+* Update `usrsctp` dependency.
+* Update `typescript-eslint` deps.
+* Update Node deps.
+
+
 ### 3.6.18
 
 * Fix `ortc.getConsumerRtpParameters()` RTX codec comparison issue (PR #453).
