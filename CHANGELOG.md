@@ -1,11 +1,41 @@
 # Changelog
 
+### 3.6.27
 
-### 3.6.22 (WIP)
+* Update NPM deps.
+* Allow the `mediasoup-worker` process to inherit all environment variables (issue #480).
 
-* `Transport.cpp`: Provide transport congestion client with RTCP Receiver Reports (#464)
+
+### 3.6.26
+
+* BWE tweaks and debug logs.
+* Update NPM deps.
+
+
+### 3.6.25
+
+* Update `Catch` to 2.13.2.
+* Update NPM deps.
+* sctp fixes #479.
+
+
+### 3.6.24
+
+* Update `awaitqueue` dependency.
+
+
+### 3.6.23
+
+* Fix yet another memory leak in Node.js layer due to `PayloadChannel` event listener not being removed.
+* Update NPM deps.
+
+
+### 3.6.22
+
+* `Transport.cpp`: Provide transport congestion client with RTCP Receiver Reports (#464).
 * Update `libuv` to 1.40.0.
 * Update Node deps.
+* `SctpAssociation.cpp`: increase `sctpBufferedAmount` before sending any data (#472).
 
 
 ### 3.6.21

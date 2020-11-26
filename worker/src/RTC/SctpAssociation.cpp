@@ -425,17 +425,16 @@ namespace RTC
 			}
 		}
 
+		this->sctpBufferedAmount += len;
+
+		// Notify the listener about the buffered amount increase regardless
+		// usrsctp_sendv result.
+		// In case of failure the correct value will be later provided by usrsctp
+		// via onSendSctpData.
+		this->listener->OnSctpAssociationBufferedAmount(this, this->sctpBufferedAmount);
+
 		int ret = usrsctp_sendv(
 		  this->socket, msg, len, nullptr, 0, &spa, static_cast<socklen_t>(sizeof(spa)), SCTP_SENDV_SPA, 0);
-
-		if (ret > 0)
-		{
-			// NOTE: 'usrsctp_sendv' returns the number of bytes sent.
-			// Don't decrese such value to sctpBufferedAmount since nothing is sent
-			// at this point.
-			this->sctpBufferedAmount += len;
-			this->listener->OnSctpAssociationBufferedAmount(this, this->sctpBufferedAmount);
-		}
 
 		if (ret < 0)
 		{
