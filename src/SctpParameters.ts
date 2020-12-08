@@ -1,8 +1,3 @@
-export type SctpCapabilities =
-{
-  numStreams: NumSctpStreams;
-}
-
 /**
  * Both OS and MIS are part of the SCTP INIT+ACK handshake. OS refers to the
  * initial number of outgoing SCTP streams that the server side transport creates
