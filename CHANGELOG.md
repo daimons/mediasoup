@@ -1,5 +1,20 @@
 # Changelog
 
+
+### 3.6.29
+
+* Fix wrong message about `rtcMinPort` and `rtcMaxPort`.
+* Update deps.
+* Improve `EnhancedEventEmitter.safeAsPromise()` (although not used).
+
+
+### 3.6.28
+
+* Fix replacement of `__MEDIASOUP_VERSION__` in `lib/index.d.ts` (issue #483).
+* Update NPM deps.
+* `worker/scripts/configure.py`: Handle 'mips64' (PR #485).
+
+
 ### 3.6.27
 
 * Update NPM deps.
